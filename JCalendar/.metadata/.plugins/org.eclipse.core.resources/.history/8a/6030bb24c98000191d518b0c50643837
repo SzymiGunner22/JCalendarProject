@@ -56,6 +56,6 @@ public class MainFrame {
 		btnNewButton_1.setBounds(982, 136, 139, 50);
 		frame.getContentPane().add(btnNewButton_1);
 		
-		//Robie commita i sprawdzam czy repo dziala
+		
 	}
 }
