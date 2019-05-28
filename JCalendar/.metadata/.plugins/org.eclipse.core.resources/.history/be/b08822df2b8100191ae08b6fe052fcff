@@ -7,13 +7,10 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import com.toedter.calendar.JCalendar;
-import com.toedter.calendar.JDateChooser;
-import javax.swing.JTextField;
 
 public class MainFrame {
 
 	private JFrame frame;
-	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -52,34 +49,12 @@ public class MainFrame {
 		frame.getContentPane().add(calendar);
 		
 		JButton btnNewButton = new JButton("New button");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btnNewButton.setBounds(982, 45, 139, 50);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		btnNewButton_1.setBounds(982, 142, 139, 40);
+		btnNewButton_1.setBounds(982, 136, 139, 50);
 		frame.getContentPane().add(btnNewButton_1);
-		
-		textField = new JTextField();
-		textField.setBounds(982, 235, 116, 22);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
-		
-		JButton btnNewButton_2 = new JButton("New button");		
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton_2.setBounds(987, 296, 97, 25);
-		frame.getContentPane().add(btnNewButton_2);
 		
 		//Robie commita i sprawdzam czy repo dziala
 		

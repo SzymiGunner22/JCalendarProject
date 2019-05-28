@@ -1,13 +1,13 @@
 import java.sql.Timestamp;
 import java.util.Comparator;
 
-public class Event implements Comparable<Event>{
+public class Event implements Comparator<Event>{
 	private String name;
 	private String place;
 	private String description;
 	
-	private Timestamp startDate;
-	private Timestamp endDate;
+	private Timestamp start;
+	private Timestamp end;
 	
 	Event(String name,String place,String description,Timestamp start, Timestamp end)
 	{
@@ -15,8 +15,8 @@ public class Event implements Comparable<Event>{
 		this.name=name;
 		this.place=place;
 		this.description=description;
-		this.startDate=start;
-		this.endDate=end;
+		this.start=start;
+		this.end=end;
 	}
 	
 	public String getName()
@@ -51,36 +51,47 @@ public class Event implements Comparable<Event>{
 	
 	public Timestamp getStart()
 	{
-		return startDate;
+		return start;
 	}
 	
 	public void setStart(Timestamp start)
 	{
-		this.startDate=start;
+		this.start=start;
 	}
 	
 	public Timestamp getEnd()
 	{
-		return endDate;
+		return end;
 	}
 	
 	public void setEnd(Timestamp end)
 	{
-		this.endDate=end;
+		this.end=end;
 	}
 	
 	public String toString()
 	{
-		return "Event: " + name + " Date rozpoczecia:" + startDate + " Date zakoñczenia:" + endDate;
+		return "Event: " + name ;
 	}
 
 	@Override
-	public int compareTo(Event o) {
+	public int compare(Event o1, Event o2) {//komentarz 
 		// TODO Auto-generated method stub
-		return this.startDate.compareTo(o.startDate);
+		return o1.start.compareTo(o2.end);
 	}
-
 	
+//	public static Comparator<Event> EventComparator = new Comparator<Event>(){
+//		@Override
+//		public int compare(Event E1, Event E2) {
+//			return E1.name.compareTo(E2.name);
+//		}
+//	}; 
 	
-
+//	@Override
+//	public int compareTo(Event o) {
+//		// TODO Auto-generated method stub
+//		if(this.start.equals(o.start)) return 0;
+//		if(this.start.after(o.start)) return 1;
+//		else return -1;
+//	}
 }
