@@ -83,13 +83,15 @@ public class Event implements Comparable<Event>{
 	@SuppressWarnings("deprecation")
 	void setNewStartDate(int y,int m, int d, int h, int mi, int s, int n)
 	{
-		startDate=new Timestamp(y-1900,m-1,d,h,mi,s,n);
+		this.startDate=new Timestamp(y-1900,m-1,d,h,mi,s,n);
+			
 	}
-	void setNewEndDate( int y,int m, int d, int h, int mi, int s, int n)
+	void setNewEndDate(int y,int m, int d, int h, int mi, int s, int n)
 	{
 		this.endDate=new Timestamp(y-1900,m-1,d,h,mi,s,n);
 			
 	}
+
 	@Override
 	public int compareTo(Event o) {
 		// TODO Auto-generated method stub
