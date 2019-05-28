@@ -1,7 +1,7 @@
 import java.sql.Timestamp;
 import java.util.Comparator;
 
-public class Event implements Comparable<Event>{
+public class Event implements Comparator<Event>{
 	private String name;
 	private String place;
 	private String description;
@@ -73,19 +73,25 @@ public class Event implements Comparable<Event>{
 	{
 		return "Event: " + name ;
 	}
-	
-	public static Comparator<Event> EventComparator = new Comparator<Event>(){
-		@Override
-		public int compare(Event E1, Event E2) {
-			return E1.name.compareTo(E2.name);
-		}
-	}; 
-	
+
 	@Override
-	public int compareTo(Event o) {
+	public int compare(Event o1, Event o2) {
 		// TODO Auto-generated method stub
-		if(this.start.equals(o.start)) return 0;
-		if(this.start.after(o.start)) return 1;
-		else return -1;
+		return o1.start.compareTo(o2.end);
 	}
+	
+//	public static Comparator<Event> EventComparator = new Comparator<Event>(){
+//		@Override
+//		public int compare(Event E1, Event E2) {
+//			return E1.name.compareTo(E2.name);
+//		}
+//	}; 
+	
+//	@Override
+//	public int compareTo(Event o) {
+//		// TODO Auto-generated method stub
+//		if(this.start.equals(o.start)) return 0;
+//		if(this.start.after(o.start)) return 1;
+//		else return -1;
+//	}
 }
