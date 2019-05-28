@@ -5,10 +5,11 @@ public class Event implements Comparable<Event>{
 	private String name;
 	private String place;
 	private String description;
+	
 	private Timestamp startDate;
 	private Timestamp endDate;
 	
-	Event(String name,String place,Timestamp timestamp, Timestamp timestamp2,String description)
+	Event(String name,String place,Timestamp timestamp, Timestamp timestamp2)
 	{
 		super();
 		if(timestamp2.compareTo(timestamp)<0) {
@@ -17,7 +18,7 @@ public class Event implements Comparable<Event>{
 		
 		this.name=name;
 		this.place=place;
-		this.description=description;
+		this.description=null;
 		this.startDate=timestamp;
 		this.endDate=timestamp2;
 	}
