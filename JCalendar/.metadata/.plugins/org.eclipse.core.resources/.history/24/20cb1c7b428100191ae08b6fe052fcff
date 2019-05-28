@@ -1,0 +1,14 @@
+import java.sql.Timestamp;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Szymon Rutkowski 216881 i Sylwester D¹browski");
+		Calendar Cal = new Calendar();
+		@SuppressWarnings("deprecation")
+		Event E1 = new Event("Hairdresser","Lodz",new Timestamp(2019-1900,4,28,12,00,00,0),new Timestamp(2019,5,28,0,10,0,0));
+		System.out.println(E1.toString());
+	}
+
+}

@@ -9,14 +9,18 @@ public class Event implements Comparable<Event>{
 	private Timestamp startDate;
 	private Timestamp endDate;
 	
-	Event(String name,String place,String description,Timestamp start, Timestamp end)
+	Event(String name,String place,Timestamp timestamp, Timestamp timestamp2)
 	{
 		super();
+		if(timestamp2.compareTo(timestamp)<0) {
+			throw new IllegalArgumentException("End date has to be a later date than Start date: " + timestamp2);
+		}
+		
 		this.name=name;
 		this.place=place;
-		this.description=description;
-		this.startDate=start;
-		this.endDate=end;
+		this.description=null;
+		this.startDate=timestamp;
+		this.endDate=timestamp2;
 	}
 	
 	public String getName()
@@ -71,7 +75,7 @@ public class Event implements Comparable<Event>{
 	
 	public String toString()
 	{
-		return "Event: " + name + " Date rozpoczecia:" + startDate + " Date zakoñczenia:" + endDate;
+		return "Event: " + name + " Location: "  + place + " Begin at: " + startDate + " Ends at: " + endDate;
 	}
 
 	@Override

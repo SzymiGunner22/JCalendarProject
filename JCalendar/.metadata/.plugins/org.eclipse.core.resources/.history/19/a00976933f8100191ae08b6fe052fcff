@@ -1,0 +1,78 @@
+import java.lang.String;
+import java.io.File;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void showMenu(){
+        System.out.print("What do you want to do?\n");
+        System.out.print("R record new wav\n");
+        System.out.print("P play your wav\n");
+        System.out.print("M show this menu\n");
+        System.out.print("C Cancel program\n");
+        System.out.print("\n");
+    }
+
+    public static void main(String[] args) {
+
+       Player player = new Player();
+        final Recorder recorder = new Recorder();
+        String theTime;
+
+        Scanner scan = new Scanner(System.in);
+
+
+
+        char c;
+
+        // creates a new thread that waits for a specified
+        // of time before stopping
+        showMenu();
+        do {
+            Scanner s = new Scanner(System.in);
+            c = s.next().charAt(0);
+            switch (c){
+                case 'R':
+                case 'r':
+                    System.out.println("Set time of recording\n");
+                    theTime=scan.nextLine();
+                    long time=Long.parseLong(theTime)*1000;
+                    long finalTime = time;
+                    Thread stopper = new Thread(new Runnable() {
+                        public void run() {
+                            try {
+                                Thread.sleep(finalTime);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            recorder.finish();
+                        }
+                    });
+                    stopper.start();
+                    recorder.start();
+                    break;
+                case 'P':
+                case 'p':
+                    System.out.println("Playing test.wav");
+                    player.playSound(new File("F:\\Studies\\Telekomunikacja i transmisja\\zad4\\zadanie4\\src\\test.wav"));
+                    break;
+                case 'C':
+                case 'c':
+                    return;
+                case 'T':
+                case 't':
+                    System.out.println("Set new time:");
+                    Scanner S = new Scanner(System.in);
+                    time = S.nextLong()*1000;
+                    break;
+                case 'M':
+                case 'm':
+                    showMenu();
+                    break;
+                default:
+                    break;
+
+            }
+        }while(c!='c' || c!='C');
+    }
+}
