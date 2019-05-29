@@ -16,9 +16,10 @@ public class Main {
 		cal.addEvent(e2);
 		cal.addEvent(e3);
 		cal.printAllEvents();
+		System.out.println();
 //		cal.deleteEvent(e2);
 		cal.printAllEvents();
-		cal.setNewStartDateCal(e1,2019, 5, 28, 10, 15, 0, 0);
+		cal.setNewStartDateCal(e1,2019, 5, 28, 9, 10, 0, 0);
 		System.out.println();
 		cal.printAllEvents();
 	}

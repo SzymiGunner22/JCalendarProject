@@ -9,11 +9,21 @@ import java.awt.event.ActionEvent;
 import com.toedter.calendar.JCalendar;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.JTextField;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JMenu;
+import javax.swing.JPopupMenu;
+import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.awt.Dimension;
+import java.awt.BorderLayout;
 
 public class MainFrame {
 
 	private JFrame frame;
-	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -31,6 +41,7 @@ public class MainFrame {
 		});
 	}
 
+	
 	/**
 	 * Create the application.
 	 */
@@ -43,46 +54,43 @@ public class MainFrame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 1198, 566);
+		frame.setBounds(100, 100, 1000, 630);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		
+		JMenuBar menuBar = new JMenuBar();
+		frame.setJMenuBar(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("Menu");
+		menuBar.add(mnNewMenu);
+		
+		
+		JMenu mnSave = new JMenu("save");
+		mnNewMenu.add(mnSave);
+		
+		JMenuItem mntmToFile = new JMenuItem("to file");
+		mnSave.add(mntmToFile);
 		
 		JCalendar calendar = new JCalendar();
-		calendar.setBounds(30, 13, 890, 493);
-		frame.getContentPane().add(calendar);
+		frame.getContentPane().add(calendar, BorderLayout.CENTER);
 		
-		JButton btnNewButton = new JButton("New button");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton.setBounds(982, 45, 139, 50);
-		frame.getContentPane().add(btnNewButton);
+//		calendar.getDayChooser().addPropertyChangeListener(
+//		        //property sliderListener detects change of date in date chooser
+//		        (PropertyChangeEvent evt)-> { dateChooserPropertChanged(evt);   });
 		
-		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
-		btnNewButton_1.setBounds(982, 142, 139, 40);
-		frame.getContentPane().add(btnNewButton_1);
-		
-		textField = new JTextField();
-		textField.setBounds(982, 235, 116, 22);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
-		
-		JButton btnNewButton_2 = new JButton("New button");		
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton_2.setBounds(987, 296, 97, 25);
-		frame.getContentPane().add(btnNewButton_2);
-		
-		//Robie commita i sprawdzam czy repo dziala
-		
-		//c'mon let's do this
+		 calendar.getDayChooser().addPropertyChangeListener("day", new PropertyChangeListener() {
+
+			    @Override
+			    public void propertyChange(PropertyChangeEvent e) {
+			        System.out.println(e.getOldValue() +" "+ e.getPropertyName()
+			                + ": " + e.getNewValue());
+
+			    }
+			});
+	
+	
+
+	}
+	
+	private static void addPopup(Component component, final JPopupMenu popup) {
 	}
 }
