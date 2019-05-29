@@ -1,28 +1,5 @@
-<<<<<<< Updated upstream
-INDEX VERSION 1.131+C:\Users\Szymi\Desktop\ProjectCalendar\JCalendarProject\JCalendar\.metadata\.plugins\org.eclipse.jdt.core
-3924432333.index
-1363272611.index
-140032328.index
-3315403139.index
-3749953610.index
-277098456.index
-1784213029.index
-2469393919.index
-4292287268.index
-1240120055.index
-2604515582.index
+INDEX VERSION 1.131+C:\Users\Szymi\Desktop\ProjectCalendar\JCALENDAR\JCalendarProject\JCalendar\.metadata\.plugins\org.eclipse.jdt.core
 3235859960.index
-4291119242.index
+1363272611.index
 4039664828.index
-3259128581.index
-1692395065.index
-3872537624.index
-1279913850.index
-2517282340.index
-2981354914.index
-2478807299.index
-549687561.index
-=======
-INDEX VERSION 1.126+C:\Users\Sylwek\Repo\JCalendarProject\JCalendar\.metadata\.plugins\org.eclipse.jdt.core
 2157099701.index
->>>>>>> Stashed changes
