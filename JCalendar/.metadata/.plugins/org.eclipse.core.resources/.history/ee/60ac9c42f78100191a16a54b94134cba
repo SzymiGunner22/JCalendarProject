@@ -81,9 +81,8 @@ public class MainFrame {
 
 			    @Override
 			    public void propertyChange(PropertyChangeEvent e) {
-//			        System.out.println( e.getPropertyName()
-//			                + ": " + e.getNewValue());
-			    	  //TODO: tutaj wkleic framea
+			        System.out.println(e.getOldValue() +" "+ e.getPropertyName()
+			                + ": " + e.getNewValue());
 
 			    }
 			});

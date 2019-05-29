@@ -3,4 +3,6 @@
 <fullyQualifiedTypeName name="java.util.Collection"/>
 <fullyQualifiedTypeName name="java.security.Timestamp"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.beans.PropertyChangeEvent"/>
+<fullyQualifiedTypeName name="java.beans.PropertyChangeListener"/>
 </qualifiedTypeNameHistroy>

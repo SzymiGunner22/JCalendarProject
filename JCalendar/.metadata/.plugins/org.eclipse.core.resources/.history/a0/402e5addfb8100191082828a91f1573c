@@ -83,7 +83,7 @@ public class MainFrame {
 			    public void propertyChange(PropertyChangeEvent e) {
 //			        System.out.println( e.getPropertyName()
 //			                + ": " + e.getNewValue());
-			    	  //TODO: tutaj wkleic framea
+			    	  //TODO:tutaj trzeba wywolac nowego frame'a
 
 			    }
 			});
