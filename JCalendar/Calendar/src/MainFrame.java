@@ -83,7 +83,8 @@ public class MainFrame {
 			    public void propertyChange(PropertyChangeEvent e) {
 //			        System.out.println( e.getPropertyName()
 //			                + ": " + e.getNewValue());
-			    	  //TODO: tutaj wkleic framea
+			    	 DayFrame dayFrame = new DayFrame();
+			    	 dayFrame.setVisible(true);
 
 			    }
 			});

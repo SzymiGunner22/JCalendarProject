@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 INDEX VERSION 1.131+C:\Users\Szymi\Desktop\ProjectCalendar\JCalendarProject\JCalendar\.metadata\.plugins\org.eclipse.jdt.core
 3924432333.index
 1363272611.index
@@ -21,3 +22,7 @@ INDEX VERSION 1.131+C:\Users\Szymi\Desktop\ProjectCalendar\JCalendarProject\JCal
 2981354914.index
 2478807299.index
 549687561.index
+=======
+INDEX VERSION 1.126+C:\Users\Sylwek\Repo\JCalendarProject\JCalendar\.metadata\.plugins\org.eclipse.jdt.core
+2157099701.index
+>>>>>>> Stashed changes
